@@ -11,9 +11,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.meena1220.financialapp"
@@ -29,6 +27,17 @@
       "favicon": "./assets/favicon.png",
       "output": "single"
     },
-    "owner": "minaabarargh"
+    "owner": "minaabararghi",
+    "extra": {
+      "eas": {
+        "projectId": "24fda234-ea74-4017-b9ce-0be0b6d173b3"
+      }
+    },
+    "build": {
+      "development": {
+        "developmentClient": true,
+        "distribution": "internal"
+      }
+    }
   }
 }

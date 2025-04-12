@@ -2,7 +2,7 @@ import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import SampleInsta from "./screens/sampleInsta";
-import Tabnavigator from "./.expo/tabNavigator/tabNavigator";
+import Tabnavigator from "./navigator/tabNavigator";
 
 export type RootStackParamList = {
   Login: undefined;

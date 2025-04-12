@@ -1,14 +1,12 @@
-import 'react-native-gesture-handler';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import DashboardScreen from './screens/DashboardScreen';
-import BillPaymentScreen from './screens/BillPaymentScreen';
-import InstallmentScreen from './screens/InstallmentScreen';
+import "react-native-gesture-handler";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import SampleInsta from "./screens/sampleInsta";
+import Tabnavigator from "./.expo/tabNavigator/tabNavigator";
 
 export type RootStackParamList = {
-  Dashboard: undefined;
-  BillPayment: undefined;
-  Installment: undefined;
+  Login: undefined;
+  TabNavigator: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -16,10 +14,32 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Dashboard">
-        <Stack.Screen name="Dashboard" component={DashboardScreen} options={{ title: 'داشبورد مالی' }} />
-        <Stack.Screen name="BillPayment" component={BillPaymentScreen} options={{ title: 'پرداخت قبض' }} />
-        <Stack.Screen name="Installment" component={InstallmentScreen} options={{ title: ' خرید اقساطی' }} />
+      <Stack.Navigator initialRouteName="Login">
+        <Stack.Screen
+          name="Login"
+          component={SampleInsta}
+          options={{ title: " insta" }}
+        />
+        <Stack.Screen
+          name="TabNavigator"
+          component={Tabnavigator}
+          options={{ title: " Tabnavigator" }}
+        />
+        {/* <Stack.Screen
+          name="Dashboard"
+          component={DashboardScreen}
+          options={{ title: "داشبورد مالی" }}
+        />
+        <Stack.Screen
+          name="BillPayment"
+          component={BillPaymentScreen}
+          options={{ title: "پرداخت قبض" }}
+        />
+        <Stack.Screen
+          name="Installment"
+          component={InstallmentScreen}
+          options={{ title: " خرید اقساطی" }}
+        /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );

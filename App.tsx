@@ -3,10 +3,16 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import SampleInsta from "./screens/sampleInsta";
 import Tabnavigator from "./navigator/tabNavigator";
+import DashboardScreen from "./screens/DashboardScreen";
+import InstallmentScreen from "./screens/InstallmentScreen";
+import BillPaymentScreen from "./screens/BillPaymentScreen";
 
 export type RootStackParamList = {
   Login: undefined;
   TabNavigator: undefined;
+  Installment: undefined;
+  BillPayment: undefined;
+  Dashboard: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();

@@ -6,7 +6,6 @@ const SampleInsta = () => {
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
-        {" "}
         <Image
           style={styles.logoImg}
           source={require("../assets/favicon.png")}

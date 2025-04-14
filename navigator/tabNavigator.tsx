@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../screens/HomeScreen";
 import DashbordTackNavigate from "./dashbord/dashbordTackNavigate";
 import { Ionicons } from "@expo/vector-icons";
+import Map from "../screens/Map";
 
 const Tab = createBottomTabNavigator();
 
@@ -33,6 +34,15 @@ function Tabnavigator() {
         options={{
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="stats-chart" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Map"
+        component={Map}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="home" size={size} color={color} />
           ),
         }}
       />
